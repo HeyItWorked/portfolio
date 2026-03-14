@@ -1,0 +1,61 @@
+---
+title: 'Babel Shelf'
+description: 'A CRUD bookshelf app built in every language — same API, same database, different implementations. A polyglot comparison of web frameworks'
+techStack: ['Go', 'PostgreSQL', 'Docker', 'REST API', 'Docker Compose']
+repoUrl: 'https://github.com/HeyItWorked/babel-shelf'
+featured: true
+type: 'personal'
+---
+
+## Project Overview
+
+Babel Shelf is a polyglot experiment: the same CRUD bookshelf application, built in every language. Each implementation shares the same Postgres database and exposes an identical REST API on port 8080. The goal is to compare languages, frameworks, and idioms by holding the problem constant and varying only the tool.
+
+## Architecture
+
+```
+babel-shelf/
+├── db/                  # Shared Postgres schema
+│   └── init.sql
+├── go-bookshelf/        # Go implementation
+├── docker-compose.yml   # Orchestrates app + Postgres
+└── README.md
+```
+
+## API
+
+| Method | Endpoint       | Description       | Status |
+|--------|---------------|-------------------|--------|
+| POST   | `/books`      | Create a book     | 201    |
+| GET    | `/books`      | List all books    | 200    |
+| GET    | `/books/{id}` | Get one book      | 200    |
+| PUT    | `/books/{id}` | Update a book     | 200    |
+| DELETE | `/books/{id}` | Delete a book     | 204    |
+
+## Key Features
+
+### Polyglot Comparison
+- Same problem, different languages
+- Identical API contract across all implementations
+- Shared database schema for fair comparison
+- Dockerized for consistent environments
+
+### Clean Architecture
+- Each language follows its own idiomatic patterns
+- Separation between HTTP handling and data access
+- Proper error handling and status codes
+
+## Technical Implementation
+
+### Technologies Used
+- **Go**: First implementation with net/http and pgx
+- **PostgreSQL**: Shared relational database
+- **Docker Compose**: Orchestration of app + database
+- **Dev Containers**: Consistent development environments
+
+## Learning Outcomes
+
+- How different languages approach the same problem
+- Framework conventions and trade-offs
+- Database driver patterns across ecosystems
+- Dockerizing applications for consistency

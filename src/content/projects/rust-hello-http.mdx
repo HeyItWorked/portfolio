@@ -1,0 +1,33 @@
+---
+title: 'Pokemon Team Manager API'
+description: 'A RESTful CRUD API for managing a Pokemon team, built with Rust and Axum — demonstrating async web development and thread-safe state management'
+techStack: ['Rust', 'Axum', 'Tokio', 'Serde', 'REST API']
+repoUrl: 'https://github.com/HeyItWorked/rust-hello-http'
+featured: false
+type: 'personal'
+---
+
+## Project Overview
+
+A RESTful CRUD API for managing a Pokemon team, built with Rust and Axum. Demonstrates core concepts of web development in Rust including async/await, shared state management with `Arc<Mutex<T>>`, and type-safe JSON handling with Serde.
+
+## Key Features
+
+- Full CRUD operations for Pokemon management
+- RESTful API design with proper HTTP methods and status codes
+- Thread-safe state management using `Arc<Mutex<T>>`
+- Type-safe JSON serialization/deserialization via Serde
+- In-memory storage with Vec-based backing
+
+## Usage
+
+```bash
+cargo run  # Server starts on http://localhost:3000
+```
+
+## Learning Outcomes
+
+- Building HTTP APIs with Axum and Tokio
+- Shared mutable state in concurrent Rust applications
+- Serde for JSON serialization patterns
+- REST API design conventions

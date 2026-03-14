@@ -1,0 +1,58 @@
+---
+title: 'Curtail'
+description: 'A type-safe URL shortener in Haskell built with Servant and SQLite via persistent — clean API design with click tracking'
+techStack: ['Haskell', 'Servant', 'SQLite', 'Persistent', 'REST API']
+repoUrl: 'https://github.com/HeyItWorked/curtail'
+featured: true
+type: 'personal'
+---
+
+## Project Overview
+
+Curtail is a URL shortener built in Haskell using the Servant framework. It leverages Haskell's type system to define API contracts at the type level, with SQLite persistence via the `persistent` library. Short URLs support click tracking and statistics.
+
+## API
+
+| Method | Route             | Description              |
+|--------|-------------------|--------------------------|
+| `POST` | `/api/shorten`    | Create a short URL       |
+| `GET`  | `/:code`          | Redirect to original URL |
+| `GET`  | `/api/stats/:code`| View click statistics    |
+
+## Key Features
+
+### Type-Safe API Design
+- Servant defines the entire API as a Haskell type
+- Compile-time guarantees that handlers match the API spec
+- Automatic request parsing and validation
+
+### Persistent Storage
+- SQLite database via the `persistent` library
+- Type-safe database queries
+- Automatic schema migration
+
+### Click Tracking
+- Track redirect counts per short URL
+- Statistics endpoint for monitoring usage
+
+## Technical Implementation
+
+### Technologies Used
+- **Haskell**: Pure functional programming language
+- **Servant**: Type-level web framework
+- **SQLite**: Lightweight embedded database
+- **Persistent**: Type-safe ORM for Haskell
+- **Stack**: Haskell build tool
+
+## Learning Outcomes
+
+### Functional Programming
+- Type-level programming for API definitions
+- Monad transformers for effect composition
+- Haskell's type system for correctness guarantees
+- Working with `persistent` for database access
+
+### Web Development in Haskell
+- Servant's approach to API design vs traditional frameworks
+- How type safety eliminates entire categories of bugs
+- Trade-offs of functional web development
