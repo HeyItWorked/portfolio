@@ -1,7 +1,7 @@
 ---
 import BentoCard from "../BentoCard.astro"
 
-const techTags = ["Rust", "DNS Protocol", "UDP", "Binary Parsing"]
+const techTags = ["Rust", "Tokio", "Axum", "Async"]
 ---
 
 <BentoCard index={3} className="col-span-1 md:col-span-2">
@@ -11,7 +11,7 @@ const techTags = ["Rust", "DNS Protocol", "UDP", "Binary Parsing"]
         Featured Project
       </p>
       <h3 class="text-lg font-semibold text-foreground">
-        DNS Server in Rust
+        Foreman
       </h3>
       <div class="mt-3 flex flex-wrap gap-2">
         {techTags.map((tag) => (
@@ -23,7 +23,7 @@ const techTags = ["Rust", "DNS Protocol", "UDP", "Binary Parsing"]
         ))}
       </div>
       <a
-        href="/projects/dns-server-rust"
+        href="/projects/foreman"
         class="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-400 transition-colors hover:text-emerald-300"
       >
         View Project
@@ -32,8 +32,8 @@ const techTags = ["Rust", "DNS Protocol", "UDP", "Binary Parsing"]
     </div>
     <div class="relative h-32 w-full overflow-hidden rounded-xl border border-white/10 sm:h-36 sm:w-56">
       <img 
-        src="/images/rust-dns.png" 
-        alt="DNS Server in Rust"
+        src="/images/rust-dns.png"
+        alt="Foreman - Async Task Queue"
         class="h-full w-full object-cover"
       />
     </div>
