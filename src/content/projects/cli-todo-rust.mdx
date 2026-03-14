@@ -1,0 +1,34 @@
+---
+title: 'CLI Todo App'
+description: 'A command-line todo application in Rust with JSON file persistence — learning Rust fundamentals through a practical CLI tool'
+techStack: ['Rust', 'Clap', 'Serde', 'JSON', 'CLI']
+repoUrl: 'https://github.com/HeyItWorked/cli-todo-rust'
+featured: false
+type: 'personal'
+---
+
+## Project Overview
+
+A simple but complete command-line todo application built in Rust. Features task creation, completion tracking, and JSON file persistence using Clap for argument parsing and Serde for serialization.
+
+## Usage
+
+```bash
+cargo run -- add "Buy groceries"
+cargo run -- list
+cargo run -- complete 0
+```
+
+## Key Features
+
+- Add, list, and complete tasks from the command line
+- JSON file persistence between sessions
+- Clap-based CLI with derive macros
+- 0-based task indexing
+
+## Learning Outcomes
+
+- Clap derive macros for CLI argument parsing
+- File I/O and JSON persistence with Serde
+- Rust struct design and enum patterns
+- Error handling for file operations

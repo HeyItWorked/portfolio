@@ -1,0 +1,58 @@
+---
+title: 'MiniCI'
+description: 'A minimal CI runner written in Go that watches Git repositories, triggers builds on commit, runs steps in containers, and streams logs to a dashboard'
+techStack: ['Go', 'Docker', 'Git', 'YAML', 'REST API']
+repoUrl: 'https://github.com/HeyItWorked/minici'
+featured: true
+type: 'personal'
+---
+
+## Project Overview
+
+MiniCI is a from-scratch continuous integration runner built in Go. It watches a Git repository for new commits, triggers pipeline builds, runs steps in containers, streams logs live, and displays results in a dashboard. The goal is to understand CI/CD internals by building one from the ground up.
+
+## Key Features
+
+### Process Execution
+- Run commands with configurable timeouts
+- Capture stdout/stderr output
+- Stream logs live to clients
+
+### Git Integration
+- Watch repositories for new commits
+- Detect changed files via diff
+- Trigger pipelines based on commit activity
+
+### Pipeline Definition
+- Parse `pipeline.yaml` configuration files
+- Run steps sequentially or in parallel
+- Define build stages with dependencies
+
+## Technical Implementation
+
+### Architecture
+1. **Git Watcher**: Polls repository for new commits and diffs
+2. **Pipeline Parser**: Reads YAML definitions and builds execution graphs
+3. **Process Runner**: Executes commands with timeout and output capture
+4. **Log Streamer**: Real-time log streaming to connected clients
+5. **REST API**: HTTP endpoints for build status and management
+
+### Technologies Used
+- **Go**: Core language for concurrency and performance
+- **Docker**: Container-based step execution
+- **YAML**: Pipeline configuration format
+- **Git**: Repository monitoring and diff detection
+
+## Learning Outcomes
+
+### Systems Programming
+- Process spawning and output capture in Go
+- Real-time log streaming over HTTP
+- Concurrent pipeline step execution
+- YAML parsing and configuration management
+
+### CI/CD Internals
+- Understanding how CI runners work under the hood
+- Pipeline DAG execution ordering
+- Container isolation for build steps
+- Build artifact management

@@ -1,0 +1,52 @@
+---
+title: 'Pomo'
+description: 'Terminal Pomodoro timer with a virtual study room, NPC companions, toast notifications, and ambient sound — zero dependencies, POSIX sh'
+techStack: ['Shell', 'POSIX sh', 'Tmux', 'Terminal UI']
+repoUrl: 'https://github.com/HeyItWorked/pomo'
+featured: false
+type: 'personal'
+---
+
+## Project Overview
+
+Pomo is a terminal-based Pomodoro timer that goes beyond a simple countdown. It features a virtual study room with NPC companions, toast notifications, auto tmux layouts, and ambient sound — all in zero-dependency POSIX sh.
+
+```
+  FOCUS SESSION
+
+  24:32  ████████████████░░░░░░░░░░░░  work
+```
+
+## Key Features
+
+### Live Countdown
+- Pink progress bar with in-place rewriting
+- Work/break session tracking
+
+### Auto Tmux Layout
+- Run `pomo start` from any terminal
+- Spawns a 4-pane tmux session automatically
+
+### Virtual Study Room
+- NPCs join your session and change statuses
+- 10 companions, 6 personalities, 70+ activities
+- Characters go on tangents and leave mid-session
+
+### Toast Notifications
+- Slide-in notifications from the right
+- NPC events without interrupting the timer
+
+### Ambient Sound
+- Shuffles your own audio files
+- Background loop during focus sessions
+
+## Technical Implementation
+
+- **POSIX sh**: Zero external dependencies
+- **Tmux**: Session and pane management
+- **Terminal escape codes**: UI rendering and color
+- **macOS + Linux**: Cross-platform support
+
+## Why This Project Matters
+
+Demonstrates that creative, feature-rich terminal applications can be built with nothing but shell scripting — no Node, no Python, no compiled languages needed.

@@ -1,0 +1,46 @@
+---
+title: 'Groundwork'
+description: 'One command, every language, every machine — polyglot dev environment via Nix flakes with Rust, Go, Python, and Haskell toolchains'
+techStack: ['Nix', 'Nix Flakes', 'Rust', 'Go', 'Haskell', 'Python']
+repoUrl: 'https://github.com/HeyItWorked/groundwork'
+featured: false
+type: 'personal'
+---
+
+## Project Overview
+
+Groundwork is a polyglot development environment powered by Nix flakes. One command (`nix develop`) gives you four complete toolchains — Rust, Go, Python, and Haskell — plus modern CLI replacements. No containers, no version managers, no `sudo`.
+
+## What You Get
+
+### Four Toolchains
+
+| Language | Tools |
+|----------|-------|
+| Rust     | `rustc` `cargo` `rust-analyzer` `clippy` `rustfmt` |
+| Go       | `go` `gopls` |
+| Python   | `python3` |
+| Haskell  | `ghc` `cabal` `haskell-language-server` |
+
+### Modern CLI Tools
+
+| Tool  | Replaces |
+|-------|----------|
+| `bat` | `cat` — with syntax highlighting |
+| `eza` | `ls` — with git integration |
+| `fd`  | `find` — faster and simpler |
+| `rg`  | `grep` — ripgrep |
+
+## Key Features
+
+- **Instant setup**: First run pulls from cache, every run after is instant
+- **Reproducible**: Same versions on every machine via Nix lockfile
+- **Cross-platform**: macOS and Linux support
+- **No containers**: Native performance, no Docker overhead
+
+## Learning Outcomes
+
+- Nix flakes for reproducible development environments
+- Declarative package management vs imperative installs
+- Cross-platform toolchain management
+- How Nix's content-addressed store works

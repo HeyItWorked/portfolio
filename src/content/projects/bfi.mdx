@@ -1,0 +1,40 @@
+---
+title: 'BFI'
+description: 'A Brainfuck interpreter written in C++ — a Turing-complete esoteric language interpreter exploring the minimal boundary of computation'
+techStack: ['C++', 'C++17', 'Systems Programming']
+repoUrl: 'https://github.com/HeyItWorked/bfi'
+featured: false
+type: 'personal'
+---
+
+## Project Overview
+
+BFI is a Brainfuck interpreter written in C++17. Brainfuck is an esoteric programming language with only 8 instructions, yet it's Turing-complete. This project interprets Brainfuck programs, handling memory cells, pointer manipulation, I/O, and loop control flow.
+
+## Usage
+
+```bash
+g++ -std=c++17 -O2 -Wall -o bfi main.cpp
+./bfi programs/hello.bf   # Hello World!
+```
+
+## Key Features
+
+### Instruction Set
+All 8 Brainfuck instructions implemented:
+- `>` `<` — Move memory pointer
+- `+` `-` — Increment/decrement cell
+- `.` `,` — Output/input character
+- `[` `]` — Loop begin/end
+
+### Demo Programs
+- `hello.bf` — Hello World
+- `cat.bf` — Echo input
+- `count.bf` — Count from 0
+
+## Learning Outcomes
+
+- Interpreter design and instruction dispatch
+- Memory model implementation (tape with pointer)
+- Bracket matching for loop control flow
+- How minimal a Turing-complete language can be

@@ -1,0 +1,75 @@
+---
+title: 'Foreman'
+description: 'A minimal async task queue inspired by Celery — built from scratch with Tokio and Axum, featuring job retries with exponential backoff'
+techStack: ['Rust', 'Tokio', 'Axum', 'Async', 'REST API']
+repoUrl: 'https://github.com/HeyItWorked/foreman'
+featured: true
+type: 'personal'
+---
+
+## Project Overview
+
+Foreman is a minimal async task queue inspired by Celery, built from scratch in Rust with Tokio and Axum. It features a concurrent worker pool with bounded parallelism, job retries with exponential backoff, and a full HTTP API for job management.
+
+## API
+
+### Submit a Job
+```bash
+curl -X POST http://localhost:3000/jobs \
+  -H "content-type: application/json" \
+  -d '{"kind": "echo", "data": {"msg": "hello"}}'
+```
+
+### Check Job Status
+```bash
+curl http://localhost:3000/jobs/<id>
+```
+
+### List Jobs (with filtering)
+```bash
+curl "http://localhost:3000/jobs?status=completed"
+```
+
+### Cancel a Queued Job
+```bash
+curl -X DELETE http://localhost:3000/jobs/<id>
+```
+
+## Key Features
+
+### Async Worker Pool
+- Bounded parallelism with Tokio semaphores
+- Channel-based job distribution
+- Graceful shutdown handling
+
+### Retry Mechanism
+- Exponential backoff on job failure
+- Configurable max retry count
+- Dead letter tracking for failed jobs
+
+### HTTP API
+- RESTful endpoints via Axum
+- Job submission, status, listing, and cancellation
+- Filter jobs by status
+
+## Technical Implementation
+
+### Technologies Used
+- **Rust**: Memory-safe systems programming
+- **Tokio**: Async runtime with channels and semaphores
+- **Axum**: Ergonomic web framework built on Tokio
+- **Serde**: JSON serialization/deserialization
+- **UUID**: Unique job identification
+
+### Concurrency Primitives
+- `tokio::sync::mpsc` for job queue channel
+- `tokio::sync::Semaphore` for bounded worker pool
+- `Arc<Mutex<T>>` for shared state
+- `tokio::select!` for graceful shutdown
+
+## Learning Outcomes
+
+- Deep understanding of Tokio's concurrency primitives
+- Building production-style HTTP APIs with Axum
+- Implementing retry strategies with backoff
+- Designing concurrent systems with bounded resources
