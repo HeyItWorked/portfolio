@@ -33,7 +33,7 @@ jobs:
         run: bun audit 2>&1 | tee audit-output.txt || true
 
       - name: Upload audit results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: security-audit
@@ -73,7 +73,7 @@ jobs:
           ls -la dist/
 
       - name: Upload build artifact (for inspection)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: dist-preview
           path: dist/
